@@ -18,7 +18,7 @@
     <section class="bg-navy">
         <nav class="container navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/welcome">
                     <img src="assets/images/logo.svg" alt="semina" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -28,7 +28,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto my-3 my-lg-0">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="/welcome">Home</a>
                         <a class="nav-link" href="#">Browse</a>
                         <a class="nav-link" href="#">Stories</a>
                         <a class="nav-link" href="#">About</a>
@@ -65,7 +65,7 @@
                                     <a class="dropdown-item" href="#">Rewards</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="signin.html">Sign Out</a>
+                                    <a class="dropdown-item" href="/signin">Sign Out</a>
                                 </li>
                             </ul>
                             <!-- END: Dropdown Menu for Desktop -->
@@ -83,7 +83,7 @@
                                         <a class="list-group-item" href="#">Rewards</a>
                                     </li>
                                     <li>
-                                        <a class="list-group-item" href="signin.html">Sign Out</a>
+                                        <a class="list-group-item" href="/signin">Sign Out</a>
                                     </li>
                                 </ul>
                             </div>
@@ -132,7 +132,7 @@
 
     <footer class="footer bg-navy">
         <div class="container">
-            <a href="index.html">
+            <a href="/welcome">
                 <img src="assets/images/logo.svg" alt="semina" />
             </a>
             <div class="mt-3 d-flex flex-row flex-wrap footer-content align-items-baseline">

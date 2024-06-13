@@ -1,49 +1,110 @@
 @extends('layouts.app')
 
-@section('navbar')
-
-<div class="hero">
-    <div class="hero-headline">
-        Expand Your <span class="text-gradient-blue">Knowledge</span> <br class="d-none d-lg-block" />
-        by <span class="text-gradient-pink">Joining</span> Our Greatest Events
-    </div>
-    <p class="hero-paragraph">
-        Kami menyediakan berbagai acara terbaik untuk membantu <br class="d-none d-lg-block" />
-        anda dalam meningkatkan skills di bidang teknologi
-    </p>
-    <a href="#grow-today" class="btn-green">
-        Browse Now
-    </a>
-</div>
-<div class="d-flex flex-row flex-nowrap justify-content-center align-items-center gap-5 header-image">
-    <img src="assets/images/1.png" class="img-1" alt="semina">
-    <img src="assets/images/2.png" alt="semina" class="img-2">
-    <img src="assets/images/1.png" alt="semina" class="img-1">
-</div>
-
-
-@endsection
-
 @section('content')
+    <section class="container mx-auto px-4 ">
 
-        <section class="brand-partner text-center">
-            <p>Events held by top & biggest global companies</p>
-            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
-                <img src="assets/images/apple-111.svg" alt="semina" />
-                <img src="assets/images/Adobe.svg" alt="semina" />
-                <img src="assets/images/slack-21.svg" alt="semina" />
-                <img src="assets/images/spotify-11.svg" alt="semina" />
-                <img src="assets/images/google-2015.svg" alt="semina" />
+        <div class="preview-image bg-navy text-center">
+            <img src="assets/images/details-image.png" class="img-content" alt="semina">
+        </div>
+
+        <div class="details-content container">
+            <div class="d-flex flex-wrap justify-content-lg-center gap">
+                <!-- Left Side Description -->
+                <div class="d-flex flex-column description">
+                    <div class="headline">
+                        Start Your Design Career With Design Sprint
+                    </div>
+                    <div class="event-details">
+                        <h6>Event Details</h6>
+                        <p class="details-paragraph">
+                            Most realtors and investors are using Social Media (Facebook and Google)
+                            <b>ineffectively because</b> they don't know what they're doing or to start.
+                            They spend hours and hours trying different things and getting nowhere.
+                            This makes them feel like giving up on marketing altogether.
+                        </p>
+                        <p class="details-paragraph">
+                            We are a group of professionals who have decided to help people making
+                            travel experiences <b>whenever they want</b> and wherever they are.
+                            Our virtual tours have as their topic the beauties of the ancient world,
+                            such as Ancient Egypt or Ancient Rome, Art and History.
+                        </p>
+                    </div>
+                    <div class="keypoints">
+                        <!-- Key 1 -->
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/icons/ic-check.svg" alt="semina">
+                            <span>Hours trying different things and getting nowhere makes them feel like giving up on
+                                marketing altogether.
+                            </span>
+                        </div>
+                        <!-- Key 2 -->
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/icons/ic-check.svg" alt="semina">
+                            <span>Hours trying different things and getting nowhere makes them feel like giving up on
+                                marketing altogether.
+                            </span>
+                        </div>
+                        <!-- Key 3 -->
+                        <div class="d-flex align-items-start gap-3">
+                            <img src="assets/icons/ic-check.svg" alt="semina">
+                            <span>Hours trying different things and getting nowhere makes them feel like giving up on
+                                marketing altogether.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="map-location">
+                        <h6>Event Location</h6>
+                        <div class="map-placeholder">
+                            <div class="maps">
+                                <img src="assets/images/maps.png" alt="">
+                                <div class="absolute d-flex justify-content-center align-items-center" id="hoverMe">
+                                    <a href="#" class="btn-navy" id="btn-maps">
+                                        View in Google Maps
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Event -->
+                <div class="d-flex flex-column card-event">
+                    <!-- Speaker Information -->
+                    <h6>Your Speaker</h6>
+                    <div class="d-flex align-items-center gap-3 mt-3">
+                        <img src="assets/images/avatar.png" alt="semina" width="60">
+                        <div>
+                            <div class="speaker-name">
+                                Shayna Putri
+                            </div>
+                            <span class="occupation">Designer</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Ticket Information -->
+                    <h6>Get Ticket</h6>
+                    <div class="price my-3">$2,980<span>/person</span></div>
+                    <div class="d-flex gap-3 align-items-center card-details">
+                        <img src="assets/icons/ic-marker.svg" alt="semina"> Gowork, Bandung
+                    </div>
+                    <div class="d-flex gap-3 align-items-center card-details">
+                        <img src="assets/icons/ic-time.svg" alt="semina"> 15.00 PM WIB
+                    </div>
+                    <div class="d-flex gap-3 align-items-center card-details">
+                        <img src="assets/icons/ic-calendar.svg" alt="semina"> 22 Agustus 2022
+                    </div>
+                    <a href="checkout.html" class="btn-green">Join Now</a>
+                </div>
             </div>
-        </section>
+        </div>
 
         <section class="grow-today">
             <div class="container">
-                <div class="sub-title mb-1" id="grow-today">
-                    <span class="text-gradient-pink">Grow Today</span>
+                <div class="sub-title mb-1">
+                    <span class="text-gradient-pink">Next One</span>
                 </div>
                 <div class="title">
-                    Featured Events
+                    Similiar Events
                 </div>
                 <div class="mt-5 row gap">
                     <!-- CARD 1 -->
@@ -61,7 +122,7 @@
                                 <div class="description">
                                     Bandung, 22 Jan 2022
                                 </div>
-                                <a href="/details" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -80,7 +141,7 @@
                                 <div class="description">
                                     Jakarta, 11 Aug 2022
                                 </div>
-                                <a href="/details" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +160,7 @@
                                 <div class="description">
                                     Bandung, 22 Jan 2022
                                 </div>
-                                <a href="/details" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -118,7 +179,7 @@
                                 <div class="description">
                                     Jakarta, 11 Aug 2022
                                 </div>
-                                <a href="/details" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -189,4 +250,21 @@
             </div>
         </section>
 
+
+        <script>
+            document.getElementById("hoverMe").addEventListener("mouseover", mouseOver);
+            document.getElementById("hoverMe").addEventListener("mouseout", mouseOut);
+
+            function mouseOver() {
+                document.getElementById("btn-maps").style.opacity = "100"
+                document.getElementById("hoverMe").style.backgroundColor = "#151a2638"
+            }
+
+            function mouseOut() {
+                document.getElementById("btn-maps").style.opacity = "0"
+                document.getElementById("hoverMe").style.backgroundColor = "transparent"
+            }
+        </script>
+
+    </section>
 @endsection
