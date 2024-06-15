@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,4 +29,6 @@ Route::get('/checkout', function () {
 Route::get('/details', function () {
     return view('details');
 });
+
+Auth::routes();
 
