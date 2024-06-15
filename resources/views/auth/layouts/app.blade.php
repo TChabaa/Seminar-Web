@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     @vite('resources/scss/main.scss')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,15 +17,15 @@
             <!-- START: NAVBAR -->
             <nav class="container navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/welcome">
+                    <a class="navbar-brand" href="/">
                         <img src="assets/images/logo.svg" alt="seminar" />
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <div class="navbar-nav mx-auto my-3 my-lg-0">
-                            <a class="nav-link active" aria-current="page" href="/welcome">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                             <a class="nav-link" href="#">Browse</a>
                             <a class="nav-link" href="#">Stories</a>
                             <a class="nav-link" href="#">Participated</a>
@@ -50,7 +50,7 @@
 
         <footer class="footer bg-navy">
             <div class="container">
-                <a href="/welcome">
+                <a href="/">
                     <img src="assets/images/logo.svg" alt="seminar" />
                 </a>
                 <div class="mt-3 d-flex flex-row flex-wrap footer-content align-items-baseline">
@@ -86,9 +86,8 @@
             </div>
         </footer>
     </div>
-    
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ppkCK7X4qd+kTo5T6AxnoXmvGZXzURs6ASml89NiA+Eo+PH81GtW8OO9A8zQBs1x" crossorigin="anonymous"></script>
 </body>
 </html>
