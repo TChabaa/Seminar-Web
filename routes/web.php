@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/signin', function () {
     return view('auth.signin');
 });
@@ -30,5 +35,18 @@ Route::get('/details', function () {
     return view('details');
 });
 
-Auth::routes();
+Route::get('/participated', function () {
+    return view('participated');
+});
 
+Route::get('/createEvent', function () {
+    return view('pic.create.createEvent');
+});
+
+Route::get('/eventList', function () {
+    return view('pic.eventList');
+});
+
+
+
+Auth::routes();

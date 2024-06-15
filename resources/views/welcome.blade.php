@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('navbar')
-
 <div class="hero">
     <div class="hero-headline">
         Expand Your <span class="text-gradient-blue">Knowledge</span> <br class="d-none d-lg-block" />

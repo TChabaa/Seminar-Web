@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="container mx-auto px-4 ">
+    <div class="hero">
 
         <div class="preview-image bg-navy text-center">
             <img src="assets/images/details-image.png" class="img-content" alt="semina">
@@ -265,6 +265,5 @@
                 document.getElementById("hoverMe").style.backgroundColor = "transparent"
             }
         </script>
-
-    </section>
+    </div>
 @endsection
