@@ -25,11 +25,9 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav mx-auto my-3 my-lg-0">
-                            <a class="nav-link active" aria-current="page" href="/welcome">Home</a>
-                            <a class="nav-link" href="#">Browse</a>
-                            <a class="nav-link" href="#">Stories</a>
-                            <a class="nav-link" href="/participated">Participated</a>
-                            <a class="nav-link" href="/eventList">About</a>
+                            <a class="nav-link" href="/eventList">Event List</a>
+                            <a class="nav-link" href="/createEvent">Create Event</a>
+                            <a class="nav-link" href="#">Participant List</a>
                         </div>
                         <div class="d-grid">
                             <a class="btn-navy" href="/signin">
@@ -48,43 +46,6 @@
             @yield('content')
         </main>
 
-        <footer class="footer bg-navy">
-            <div class="container">
-                <a href="/welcome">
-                    <img src="assets/images/logo.svg" alt="seminar" />
-                </a>
-                <div class="mt-3 d-flex flex-row flex-wrap footer-content align-items-baseline">
-                    <p class="paragraph">
-                        Seminar adalah tempat di mana <br class="d-md-block d-none" /> anda dapat mencari event sesuai
-                        <br class="d-md-block d-none" /> dengan minat & terdekat.
-                    </p>
-                    <div class="d-flex flex-column footer-links">
-                        <div class="title-links mb-3">Features</div>
-                        <a href="#">Virtual</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">Merchant</a>
-                        <a href="#">Tickets</a>
-                    </div>
-                    <div class="d-flex flex-column footer-links">
-                        <div class="title-links mb-3">Company</div>
-                        <a href="#">Jobs</a>
-                        <a href="#">API</a>
-                        <a href="#">Press</a>
-                        <a href="#">Sitemap</a>
-                    </div>
-                    <div class="d-flex flex-column footer-links">
-                        <div class="title-links mb-3">Learn</div>
-                        <a href="#">Guidebook</a>
-                        <a href="#">Inspiration</a>
-                        <a href="#">Community</a>
-                        <a href="#">Tools</a>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center paragraph all-rights">
-                    All Rights Reserved. Seminar Kabin 2024.
-                </div>
-            </div>
-        </footer>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
