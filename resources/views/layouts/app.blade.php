@@ -31,11 +31,31 @@
                             <a class="nav-link" href="/participated">Participated</a>
                             <a class="nav-link" href="/eventList">About</a>
                         </div>
-                        <div class="d-grid">
-                            <a class="btn-navy" href="/signin">
-                                Sign In
-                            </a>
-                        </div>
+
+                        @guest
+                            <div class="d-grid">
+                                <a class="btn-navy" href="/signin">
+                                    Sign In
+                                </a>
+                            </div>
+                        @else
+                            <div class="dropdown">
+                                <button class="btn-navy dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                    <li>
+                                        <form method="POST" action="/logout">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item">
+                                                Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        @endguest
+
                     </div>
                 </div>
             </nav>
@@ -81,7 +101,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center paragraph all-rights">
-                    All Rights Reserved. Seminar Kabin 2024.
+                    All Rights Reserved. Seminar 2024.
                 </div>
             </div>
         </footer>

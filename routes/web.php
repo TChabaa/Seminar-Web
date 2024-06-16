@@ -37,7 +37,7 @@ Route::get('/details', function () {
 
 Route::get('/participated', function () {
     return view('participated');
-});
+})->middleware('auth');
 
 Route::get('/createEvent', function () {
     return view('pic.create.createEvent');
