@@ -60,6 +60,12 @@
             color: $white !important;
         }
 
+        input.prefilled-input {
+            font-style: italic;
+            color: #CCCCCC; /* A specific dark color value */
+            font-weight: bold; /* Optionally make it bold to ensure it's darker */
+        }
+
         .footer-payment {
             margin-top: 100px;
 

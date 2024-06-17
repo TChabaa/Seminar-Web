@@ -7,7 +7,6 @@
                 <div class="text-center checkout-title">
                     Invest In Yourself
                 </div>
-
                 <div class="event-details container d-flex flex-wrap justify-content-lg-center align-items-center gap-5">
                     <img src="assets/images/details-image.png" class="event-image" alt="semina" />
                     <div class="d-flex flex-column gap-3">
@@ -45,19 +44,21 @@
                             </div>
                         </div>
                         <div class="row row-cols-lg-8 row-cols-md-2 row-cols-1 justify-content-center">
-                            <!-- First Name -->
+                            <!-- Display First Name -->
                             <div class="mb-4 col-lg-4">
                                 <label for="first_name" class="form-label">
                                     First Name
                                 </label>
-                                <input type="text" placeholder="First name here" class="form-control" id="first_name">
+                                <input type="text" class="form-control prefilled-input" id="first_name"
+                                    value="{{ Auth::user()->name }}" readonly>
                             </div>
-                            <!-- Last Name -->
+                            <!-- Display Last Name -->
                             <div class="mb-4 col-lg-4">
                                 <label for="last_name" class="form-label">
                                     Last Name
                                 </label>
-                                <input type="text" placeholder="Last name here" class="form-control" id="last_name">
+                                <input type="text" class="form-control prefilled-input" id="last_name"
+                                    value="{{ Auth::user()->last_name }}" readonly>
                             </div>
                         </div>
                         <div class="row row-cols-lg-8 row-cols-md-2 row-cols-12 justify-content-center">
@@ -66,63 +67,47 @@
                                 <label for="email_address" class="form-label">
                                     Email
                                 </label>
-                                <input type="email" class="form-control" id="email_address" placeholder="semina@bwa.com">
+                                <input type="email" class="form-control prefilled-input" id="email_address"
+                                    value="{{ Auth::user()->email }}" readonly>
                             </div>
                             <!-- Role -->
                             <div class="mb-4 col-lg-4">
-                                <label for="exampleFormControlInput1" class="form-label">
+                                <label for="role" class="form-label">
                                     Role
                                 </label>
-                                <input type="text" class="form-control" id="role" placeholder="Product Designer">
+                                <input type="text" class="form-control prefilled-input" id="role"
+                                    placeholder="Product Designer" value="{{ Auth::user()->job }}" readonly>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Payment Method -->
-                    <div class="payment-method mt-4">
+                    <!-- Payment Receipt -->
+                    <div class="payment-receipt mt-4">
                         <div class="row row-cols-lg-8 row-cols-md-2 row-cols-1 justify-content-lg-center">
                             <div class="form-title col-lg-8">
                                 <span>02</span>
                                 <div>
-                                    Payment Method
+                                    Payment Receipt
                                 </div>
                             </div>
                         </div>
                         <div class="row row-cols-lg-8 row-cols-md-2 row-cols-1 justify-content-center gy-4 gy-md-0">
-                            <div class="col-lg-4">
-                                <label class="payment-radio h-100 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <img src="assets/icons/ic-mastercard.svg" alt="">
-                                        <div>Mastercard</div>
-                                    </div>
-                                    <input type="radio" checked="checked" name="radio">
-                                    <span class="checkmark"></span>
+                            <div class="col-lg-8">
+                                <label for="payment_receipt" class="form-label">
+                                    Upload Payment Receipt
                                 </label>
-                            </div>
-                            <div class="col-lg-4">
-                                <label class="payment-radio h-100 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <img src="assets/icons/ic-sewallet.svg" alt="">
-                                        <div class="d-flex flex-column gap-1">
-                                            Sewallet
-                                            <span class="balance">Balance: $50,000</span>
-                                        </div>
-                                    </div>
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label>
+                                <input type="file" class="form-control" id="payment_receipt">
                             </div>
                         </div>
-
                     </div>
 
                     <div class="d-flex flex-column align-items-center footer-payment gap-4">
                         <button type="submit" class="btn-green">
-                            Pay Now
+                            Submit
                         </button>
                         <div>
                             <img src="assets/icons/ic-secure.svg" alt="">
-                            <span>Your payment is secure and encrypted</span>
+                            <span>Your submission is secure and encrypted</span>
                         </div>
                     </div>
 
