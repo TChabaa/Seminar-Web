@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('event_title');
             $table->text('event_description');
             $table->date('event_date');
@@ -23,10 +22,12 @@ return new class extends Migration
             $table->string('event_time');
             $table->string('organizer_name');
             $table->enum('event_type', ['seminar', 'webinar']);
-            $table->string('event_location')->nullable();
-            $table->string('event_link')->nullable();
+            $table->string('event_location')-> nullable()->default(null);
+            // $table->string('event_link')-> nullable()->default(null);
             $table->enum('payment_status', ['paid', 'free']);
-            $table->string('event_price')->nullable();
+            $table->string('event_price') -> nullable()->default(null);
+            // $table->string('event_img');
+            $table->timestamps();
         });
     }
 

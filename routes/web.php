@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Event;
 
 Route::get('/', function () {
     return view('welcome');
@@ -48,5 +50,6 @@ Route::get('/eventList', function () {
 });
 
 
+Route::resource('/pic/events', EventController::class);
 
 Auth::routes();

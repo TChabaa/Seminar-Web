@@ -9,6 +9,10 @@
     @vite('resources/js/app.js')
     @vite('resources/scss/main.scss')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -18,15 +22,15 @@
             <nav class="container navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/welcome">
-                        <img src="assets/images/logo.svg" alt="seminar" />
+                        <img src="/assets/images/logo.svg" alt="seminar" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav mx-auto my-3 my-lg-0">
-                            <a class="nav-link" href="/eventList">Event List</a>
-                            <a class="nav-link" href="/createEvent">Create Event</a>
+                            <a class="nav-link" href="/pic/events">Event List</a>
+                            <a class="nav-link" href="/pic/events/create">Create Event</a>
                             <a class="nav-link" href="#">Participant List</a>
                         </div>
                         <div class="d-grid">
