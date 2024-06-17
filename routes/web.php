@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
 
@@ -17,22 +18,12 @@ Route::get('/signin', function () {
     return view('auth.signin');
 });
 
-// Route for signup view
 Route::get('/signup', function () {
     return view('auth.signup');
 });
 
-// Route for checkout authenticated view
-Route::get('/checkout-authenticated', function () {
-    return view('checkout.checkout-authenticated');
-});
+Route::get('/checkout', [CheckoutController::class, 'redirectToCheckout']);
 
-// Route for checkout view
-Route::get('/checkout', function () {
-    return view('checkout.checkout');
-});
-
-// Route for details view
 Route::get('/details', function () {
     return view('details');
 });
@@ -48,6 +39,7 @@ Route::get('/createEvent', function () {
 Route::get('/eventList', function () {
     return view('pic.eventList');
 });
+
 
 
 Route::resource('/pic/events', EventController::class);

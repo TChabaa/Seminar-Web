@@ -93,7 +93,8 @@
                     <div class="d-flex gap-3 align-items-center card-details">
                         <img src="assets/icons/ic-calendar.svg" alt="semina"> 22 Agustus 2022
                     </div>
-                    <a href="checkout.html" class="btn-green">Join Now</a>
+                    <a href="{{ url('/checkout
+                    ') }}" class="btn-green">Join Now</a>
                 </div>
             </div>
         </div>
