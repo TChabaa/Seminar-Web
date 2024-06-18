@@ -29,7 +29,7 @@
                             <a class="nav-link" href="#">Browse</a>
                             <a class="nav-link" href="#">Stories</a>
                             <a class="nav-link" href="/participated">Participated</a>
-                            <a class="nav-link" href="/pic/e">About</a>
+                            <a class="nav-link" href="/pic/events">About</a>
                         </div>
 
                         @guest

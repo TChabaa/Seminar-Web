@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
+use App\Http\Controllers\ReceiptController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,7 +41,7 @@ Route::get('/eventList', function () {
     return view('pic.eventList');
 });
 
-
+Route::post('/receipts', [ReceiptController::class, 'store'])->name('receipts.store')->middleware('auth');
 
 Route::resource('/pic/events', EventController::class);
 
