@@ -83,38 +83,6 @@
         </div>
     </div>
 
-    <section class="grow-today">
-        <div class="container">
-            <div class="sub-title mb-1">
-                <span class="text-gradient-pink">Next One</span>
-            </div>
-            <div class="title">
-                Similar Events
-            </div>
-            <div class="mt-5 row gap">
-                @foreach ($similarEvents as $similarEvent)
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="card-grow h-100">
-                            <span class="badge-pricing">${{ $similarEvent->event_price }}</span>
-                            <img src="{{ asset('assets/images/card-placeholder.png') }}" alt="semina" />
-                            <div class="card-content">
-                                <div class="card-title">
-                                    {{ $similarEvent->event_title }}
-                                </div>
-                                <div class="card-subtitle">
-                                    {{ $similarEvent->event_type }}
-                                </div>
-                                <div class="description">
-                                    {{ $similarEvent->event_location }}, {{ $similarEvent->event_date }}
-                                </div>
-                                <a href="{{ route('event.details', $similarEvent->id) }}" class="stretched-link"></a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
 
     <section class="stories">
         <div class="d-flex flex-row justify-content-center align-items-center container">

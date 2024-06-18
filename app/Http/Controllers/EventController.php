@@ -84,7 +84,7 @@ return view('pic.events.index')->with('success', 'Event created successfully.');
      */
     public function show(Event $event)
     {
-        return view('pic.event.show', compact('event'));
+        return view('pic.events.show', compact('event'));
     }
 
     /**
