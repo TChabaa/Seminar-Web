@@ -7,6 +7,21 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
 use App\Http\Controllers\ReceiptController;
 
+use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\UserManagementController;
+use App\Http\Controllers\Admin\EventManagementController;
+
+Route::prefix('admin')->group(function () {
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('login', [LoginController::class, 'login'])->name('admin.login.submit');
+    Route::get('dashboard', function() {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::resource('users', UserManagementController::class)->names('admin.users');
+    Route::resource('events', EventManagementController::class)->names('admin.events');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
