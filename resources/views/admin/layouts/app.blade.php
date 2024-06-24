@@ -24,9 +24,8 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <div class="navbar-nav mx-auto my-3 my-lg-0">
-                            <a class="nav-link" href="#">User Management</a>
-                            <a class="nav-link" href="#">Event Management</a>
-                        </div>
+                            <a class="nav-link" href="{{ route('admin.users.index') }}">User Management</a>
+                            <a class="nav-link" href="{{ route('admin.events.index') }}">Event Management</a>
                     </div>
                 </div>
             </nav>

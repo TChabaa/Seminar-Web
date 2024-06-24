@@ -1,6 +1,6 @@
 <!-- resources/views/admin/auth/login.blade.php -->
 
-@extends('auth.layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
 <section class="container mx-auto px-4">
