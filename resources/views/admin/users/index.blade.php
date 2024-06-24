@@ -1,14 +1,20 @@
-<!-- resources/views/admin/users/index.blade.php -->
-
 @extends('admin.layouts.app')
 
 @section('content')
-<div class="container mt-5">
-    <h1>User Management</h1>
-    <a href="{{ route('admin.users.create') }}" class="btn btn-primary mb-3">Add User</a>
+<div class="container">
+    <h1 class="py-4 text-white">User Management</h1>
+
+    <!-- Add User Button -->
+    <div class="mb-5">
+        <a href="{{ route('admin.users.create') }}" class="btn-green">Add User</a>
+    </div>
+
+    <!-- Success Message -->
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
+
+    <!-- User Table -->
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -29,11 +35,11 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->job }}</td>
                     <td>
-                        <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('admin.users.edit', $user->id) }}" class="btn-green">Edit</a>
                         <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn-navy">Delete</button>
                         </form>
                     </td>
                 </tr>

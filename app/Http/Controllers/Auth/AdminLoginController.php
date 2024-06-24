@@ -17,9 +17,8 @@ class AdminLoginController extends Controller
         return view('admin.auth.login');
     }
 
-    /**
-     * Handle the login request.
-     */
+    protected $redirectTo = '/users';
+
     public function login(Request $request)
     {
         // Validate the incoming request data
@@ -31,7 +30,7 @@ class AdminLoginController extends Controller
         // Attempt to authenticate using the 'admin' guard
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
             // Redirect
-            return redirect()->route('admin.users.index');
+            return redirect()->intended($this->redirectTo);
         }
 
         // Authentication failed, throw validation exception

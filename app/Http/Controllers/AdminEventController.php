@@ -47,6 +47,8 @@ class AdminEventController extends Controller
 
     public function update(Request $request, Event $event)
     {
+        $previousData = $event->toArray();
+
         $request->validate([
             'event_title' => 'required',
             'event_description' => 'required',
@@ -64,8 +66,11 @@ class AdminEventController extends Controller
 
         $event->update($request->all());
 
+        $updatedData = $event->toArray();
+
         return redirect()->route('admin.events.index')->with('success', 'Event updated successfully.');
     }
+
 
     public function destroy(Event $event)
     {

@@ -7,13 +7,12 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminAuthMiddleware
 {
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $guard = 'admin')
     {
-        if (!Auth::check()) {
-            return redirect()->route('admin.login'); // Redirect to login route if not authenticated
+        if (!Auth::guard($guard)->check()) {
+            return redirect()->route('admin.login');
         }
 
         return $next($request);
     }
 }
-
